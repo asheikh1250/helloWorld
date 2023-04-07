@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
+
 class Student(db.Model):
     __tablename__ = "student"
 
@@ -27,6 +28,7 @@ class Student(db.Model):
     def __repr__(self):
         return f"{self.first_name} {self.last_name}"
 
+
 class Major(db.Model):
     __tablename__ = "major"
 
@@ -41,4 +43,4 @@ class Major(db.Model):
         return f"{self.major}"
 
     # Only execute once! Initial load of majors
- #   db.engine.execute("INSERT INTO major(major) VALUES ('Accounting');")
+#   db.engine.execute("INSERT INTO major(major) VALUES ('Accounting');")
